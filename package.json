@@ -21,7 +21,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.2.1",
     "prettier": "^3.0.3",
     "prettier-plugin-packagejson": "^2.4.6",
-    "prettier-plugin-tailwindcss": "^0.5.6"
+    "prettier-plugin-tailwindcss": "^0.5.7"
   },
   "homepage": "https://github.com/Handmade-Systems/prettier-config#readme",
   "devDependencies": {},
