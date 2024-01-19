@@ -1,6 +1,6 @@
 {
   "name": "@handmade-systems/prettier-config",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
@@ -18,10 +18,10 @@
     "url": "https://github.com/Handmade-Systems/prettier-config/issues"
   },
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
-    "prettier": "^3.0.3",
-    "prettier-plugin-packagejson": "^2.4.6",
-    "prettier-plugin-tailwindcss": "^0.5.6"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.9",
+    "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "homepage": "https://github.com/Handmade-Systems/prettier-config#readme",
   "devDependencies": {},
