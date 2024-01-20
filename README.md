@@ -10,19 +10,46 @@ Shared prettier config for [Handmade Systems](https://handmade-systems.de/)
    npm install --save-dev @handmade-systems/prettier-config
    ```
 
-2. Add eslint-config-prettier to your ESLint configuration – either to [eslintrc] or to [eslint.config.js (flat config)].
+2. Add eslint-config-prettier to your prettier.config.json
+- For a project using base config:
 
-    - eslintrc: Add `"prettier"` to the "extends" array in your `.eslintrc.*` file. Make sure to put it **last,** so it gets the chance to override other configs.
+```js
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { base } =  require('@handmade-systems/prettier-config')
 
-      <!-- prettier-ignore -->
-      ```json
-      {
-        "extends": [
-          "some-other-config-you-use",
-          "plugin:@handmade-systems/next"
-        ],
-        "plugins": [
-          "@handmade-systems"
+// eslint-disable-next-line no-undef
+module.exports = {
+  ...base,
+  overrides: [
+    {
+      files: ["**/**"],
+      options: {
+        plugins: [
+          "@handmade-systems/prettier-config"
         ]
-      }
-      ```
+      },
+    },
+  ],
+}
+```
+- For a project using Tailwind CSS:
+```js
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { tailwind } =  require('@handmade-systems/prettier-config')
+
+// eslint-disable-next-line no-undef
+module.exports = {
+  ...tailwind,
+  overrides: [
+    {
+      files: ["**/**"],
+      options: {
+        plugins: [
+          "@handmade-systems/prettier-config"
+        ]
+      },
+      tailwindConfig: './tailwind.config.js',
+    },
+  ],
+}
+```
